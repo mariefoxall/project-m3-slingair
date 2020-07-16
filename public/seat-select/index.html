@@ -9,12 +9,28 @@
     <body>
         <div class='main'>
             <header class='header'>
+                <a href= "/seat-select">
                 <h1 class='header-logo'>Air Slingshot</h1>
+            </a>
             </div>
             <div class="flight-select">
+                <div>
                 <label for="flight">Flight Number :</label>
-                <input name="flight" id="flight" class="flight" type="text" placeholder="flight #" />
+                <select name="flight" id="flight" class="flight"  placeholder="flight #">
+                    <option id="default-option">Select a flight</option>
+                </select></div>
+                <div class="reservation-link">
+                    <form id="reservation" class="reservation" name="reservation-form" onsubmit="handleReservation(event)">
+                        <input id="userID" type="text" name="userID" placeholder="Your user ID" required />
+                        <button class='button confirm' id='reservation-button'>
+                            <div class="lds-dual-ring"></div>
+                            View Reservation
+                        </button>
+                    </form>
+                </div>
             </div>
+            
+
             <div class="form-container">
                 <h2>Select your seat and Provide your information!</h2>
                 <form id="seats" class="content" name="salesForm" onsubmit="handleConfirmSeat(event)">

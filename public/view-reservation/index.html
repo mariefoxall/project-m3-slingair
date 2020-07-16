@@ -13,18 +13,9 @@
                     <h1 class='header-logo'>Air Slingshot</h1>
                 </a>
             </div>
-            <div class="reservation-link-2">
-                <form id="reservation" class="reservation" name="reservation-form" onsubmit="handleReservation(event)">
-                    <input id="userID" type="text" name="userID" placeholder="Your user ID" required />
-                    <button class='button confirm' id='reservation-button'>
-                        <div class="lds-dual-ring"></div>
-                        View Reservation<span id="seat-number"></span>
-                    </button>
-                </form>
-            </div>
             <div class="content confirmation">
                 <div class="user">
-                    <p class="message">Your flight is confirmed!</p>
+                    <p class="message">Your reservation:</p>
                     <ul class="user-info">
                         <li>Flight #:<span id="flight"></span> seat #: <span id="seat"></span></li>
                         <li>Name:<span id="name"></span></li>
@@ -33,8 +24,9 @@
                 </div>
                 <div class="tombstone"></div>
             </div>
+            </div>
         </div>
         <p class='footer-logo'>The only way to fly!</p>
-        <script src="./confirmed.js"></script>
+        <script src="./view-reservation.js"></script>
     </body>
 </html>
