@@ -5,6 +5,7 @@ const confirmButton = document.getElementById("confirm-button");
 let selection = "";
 
 const renderSeats = (seatsArray) => {
+  seatsDiv.innerHTML = "";
   document.querySelector(".form-container").style.display = "block";
   const seats = {};
   seatsArray.forEach((seat) => {
@@ -79,7 +80,6 @@ const handleReservation = (event) => {
 
 const handleConfirmSeat = (event) => {
   event.preventDefault();
-  // TODO: everything in here!
   fetch("/users", {
     method: "POST",
     body: JSON.stringify({
